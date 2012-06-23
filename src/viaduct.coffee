@@ -46,6 +46,7 @@ exports.host = (path, insertFrame) ->
 
   addMessageListener origin, /^viaduct-callback-([0-9]+) (.*)$/, (source, data, match, id, args) ->
     parsedArgs = JSON.parse(args)
+    parsedArgs[1].getAllResponseHeaders = () -> parsedArgs[1]._viaductHeaders
     toReceive[id](parsedArgs...)
 
   addMessageListener origin, /^viaduct-loaded$/, (source) ->
