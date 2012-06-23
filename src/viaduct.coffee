@@ -27,10 +27,10 @@ nextMsgIdentifier = 1
 
 exports.host = (path, insertFrame) ->
   origin = parseOrigin(path)
-  insertFrame ?= (e) -> window.document.body.appendChild(e)
 
   return if hosts[origin]?
 
+  insertFrame ?= (e) -> window.document.body.appendChild(e)
   frame = createIframe(path)
   insertFrame(frame)
 
