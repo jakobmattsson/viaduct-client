@@ -1,7 +1,7 @@
 {
   "name": "viaduct-client",
   "description": "Consumes a bridge for cross-domain communication in the browser",
-  "main": "viaduct.js",
+  "main": "./build/viaduct.js",
   "version": "0.1.2",
   "author": "Jakob Mattsson <jakob.mattsson@gmail.com> (jakobmattsson.se)",
   "engines": {
